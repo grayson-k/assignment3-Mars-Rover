@@ -62,3 +62,4 @@ describe("Rover class", function() {
     expect(testRover.receiveMessage(testMessage).results).toStrictEqual([{ completed: true }]);
   });
 });
+
