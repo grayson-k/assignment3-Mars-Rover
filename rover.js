@@ -7,7 +7,7 @@ class Rover {
 
    receiveMessage(message) {
       let response = {
-         messageName: message.name,
+         message: message.name,
          results: []
       }
       

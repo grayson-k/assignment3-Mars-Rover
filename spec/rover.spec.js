@@ -19,7 +19,7 @@ describe("Rover class", function() {
   it('response returned by receiveMessage contains the name of the message', function() {
     let testMessage = new Message("Test 8 Message Name");
     let test = new Rover().receiveMessage(testMessage);
-    expect(test.messageName).toBe("Test 8 Message Name");
+    expect(test.message).toBe("Test 8 Message Name");
   });
 
   // Test 9 - recieveMessage respose contains 2 commands sent
@@ -34,7 +34,7 @@ describe("Rover class", function() {
     let testCommand = new Command('STATUS_CHECK');
     let testMessage = new Message('Test 10 Message Name', testCommand);
     let testRover = new Rover(75674);
-    expect(testRover.receiveMessage(testMessage)).toStrictEqual({"messageName": "Test 10 Message Name", "results": [{"completed": true, "roverStatus": {"generatorWatts": 110, "mode": "NORMAL", "position": 75674}}]})
+    expect(testRover.receiveMessage(testMessage)).toStrictEqual({"message": "Test 10 Message Name", "results": [{"completed": true, "roverStatus": {"generatorWatts": 110, "mode": "NORMAL", "position": 75674}}]})
   });
 
   // Test 11 - response to mode change commmand
