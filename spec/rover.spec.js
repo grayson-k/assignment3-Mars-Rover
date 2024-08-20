@@ -26,7 +26,7 @@ describe("Rover class", function() {
   it('response returned by receiveMessage includes two results if two commands are sent in the message', function() {
     let arrCommands = [new Command("Test Command 1"), new Command("Test Command 2")];
     let testMessage = new Message("Test 9 Message Name", arrCommands);
-    expect(new Rover().receiveMessage(testMessage).results.length).toBe(2);
+    expect(new Rover().receiveMessage(testMessage).results.length).toBe(arrCommands.length);
   });
 
   // Test 10 - response to status check commmand
